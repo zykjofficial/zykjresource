@@ -1,10 +1,10 @@
 /*鼠标样式*/
 body, html {
-    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@v0.0.1/img/Arrow.cur), auto !important;
+    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/Arrow.cur), auto !important;
 }
 
 a, img {
-    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@v0.0.1/img/link.cur), auto !important;
+    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/link.cur), auto !important;
 }
 /*鼠标样式END*/
 
