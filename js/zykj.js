@@ -3,11 +3,11 @@ var OriginTitle = document.title;
 var titleTime;
 document.addEventListener('visibilitychange', function () {
     if (document.hidden) {
-        $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io/img/funny.ico");
+        $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@master/img/funny.ico");
         document.title = '(っ °Д °;)っ 访问的页面不存在了';
         clearTimeout(titleTime);
     } else {
-        $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io/img/favicon.ico");
+        $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@master/img/favicon.ico");
         document.title = '( •̀ ω •́ )✧ 又好啦 ~ ' + OriginTitle;
         titleTime = setTimeout(function () {
             document.title = OriginTitle;
@@ -23,6 +23,8 @@ document.body.oncopy = function () {
 
 //运行时间
 var now = new Date();
+var timeDate = document.getElementById("timeDate");
+var times = document.getElementById("times");
 
 function createtime() {
     var grt = new Date("03/21/2020 12:14:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
@@ -44,11 +46,13 @@ function createtime() {
     if (String(snum).length == 1) {
         snum = "0" + snum;
     }
-    document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
-    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    timeDate.innerHTML = "本站已安全运行 " + dnum + " 天 ";
+    times.innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
 }
 
-setInterval("createtime()", 250);
+if (timeDate != null && times != null) {
+    setInterval("createtime()", 250);
+}
 
 //获取当前IP地址和浏览器标识
 function getBrowserInfo() {
@@ -80,16 +84,33 @@ function getBrowserInfo() {
     }
 }
 
-
 var ip_content = document.querySelector(".ip_content");
 
 if (ip_content) {
     ip_content.innerHTML = '欢迎来自 <span class="p red">' + returnCitySN["cname"] + "</span> 的小伙伴<br>" + "访问IP为： <span class='p cyan'>" + returnCitySN["cip"] + "</span><br>浏览器版本：<span class='p blue'>" + getBrowserInfo() + '</span>';
 }
 
-if(returnCitySN){
+if (returnCitySN) {
     console.log("\n %c " + '欢迎来自 ' + returnCitySN["cname"] + " 的小伙伴" + "来到卓越科技的个人博客 " + " %c https://zykjofficial.tk \n", "color: #fff; background: #4285f4; padding:5px 0;", "background: #66CCFF; padding:5px 0;");
 }
 
+//手机侧边栏默认不展开
+var mobile_sidebar_menus = document.getElementById("mobile-sidebar-menus");
+var menus_item_child = mobile_sidebar_menus.getElementsByClassName("menus_item_child");
+var menus_expand = mobile_sidebar_menus.getElementsByClassName("menus-expand");
+for (var i = 0; i < menus_item_child.length; i++) {
+    menus_item_child[i].style.display = "none";
+    menus_expand[i].className += " menus-closed";
+}
+
+//随机图片 
+var full_page = document.getElementsByClassName("full_page")[0];
+var footer_bg = document.getElementById("footer");
+
+var img = "https://cdn.jsdelivr.net/gh/zykjofficial/zykjimg/anime/anime"+Math.floor(Math.random()*10)+".png";
 
 
+if(full_page != null && footer_bg!=null){
+  full_page.style.backgroundImage = "url("+img + ")";
+  footer_bg.style.backgroundImage =  "url("+img + ")";
+}
