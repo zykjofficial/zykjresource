@@ -1,3 +1,4 @@
+(function(){
 var bilibilifans = $('.bilibilifans_num');
 
 if (bilibilifans.length > 0) {
@@ -19,5 +20,6 @@ if (bilibilifans.length > 0) {
 
     })
 }
+})()
 
 
