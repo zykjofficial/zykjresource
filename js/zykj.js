@@ -3,7 +3,7 @@
 var full_page = document.getElementsByClassName("full_page")[0];
 var footer_bg = document.getElementById("footer");
 
-var img = "https://cdn.jsdelivr.net/gh/zykjofficial/zykjimg/anime/anime"+Math.floor(Math.random()*10)+".png";
+var img = "https://cdn.jsdelivr.net/gh/zykjofficial/zykjimg/anime/anime"+Math.floor(Math.random()*36)+".png";
 
 if(full_page != null && footer_bg!=null){
   full_page.style.backgroundImage = "url("+img + ")";
@@ -27,12 +27,6 @@ document.addEventListener('visibilitychange', function () {
         }, 2000);
     }
 });
-
-//复制
-document.body.oncopy = function () {
-    layer.msg("复制成功,若要转载请务必保留原文链接", (function () {
-    }))
-};
 
 //运行时间
 var now = new Date();
