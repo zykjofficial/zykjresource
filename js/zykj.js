@@ -53,7 +53,7 @@ function createtime() {
     if (String(snum).length == 1) {
         snum = "0" + snum;
     }
-    timeDate.innerHTML = "本站已安全运行 " + dnum + " 天 ";
+    timeDate.innerHTML = "小破站运行了 " + dnum + " 天 ";
     times.innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
 }
 
@@ -93,7 +93,7 @@ function getBrowserInfo() {
 
 var ip_content = document.querySelector(".ip_content");
 
-if (ip_content != null && returnCitySN !=null) {
+if (ip_content != null && returnCitySN != undefined) {
     ip_content.innerHTML = '欢迎来自 <span class="p red">' + returnCitySN["cname"] + "</span> 的小伙伴<br>" + "访问IP为： <span class='p cyan'>" + returnCitySN["cip"] + "</span><br>浏览器版本：<span class='p blue'>" + getBrowserInfo() + '</span>';
 }
 
