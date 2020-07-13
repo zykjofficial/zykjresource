@@ -98,7 +98,7 @@ if (ip_content != null && returnCitySN != undefined) {
 }
 
 if (returnCitySN) {
-    console.log("\n %c " + '欢迎来自 ' + returnCitySN["cname"] + " 的小伙伴" + "来到卓越科技的个人博客 " + " %c https://zykjofficial.tk \n", "color: #fff; background: #4285f4; padding:5px 0;", "background: #66CCFF; padding:5px 0;");
+    console.log("\n %c " + '欢迎来自 ' + returnCitySN["cname"] + " 的小伙伴" + "来到卓越科技的个人博客 " + " %c https://zykj.js.org \n", "color: #fff; background: #4285f4; padding:5px 0;", "background: #66CCFF; padding:5px 0;");
 }
 
 //手机侧边栏默认不展开
