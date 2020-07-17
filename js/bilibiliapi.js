@@ -11,8 +11,11 @@ if (bilibilifans.length > 0) {
             mid: "241230332&photo=true"
         },*/
         success: function (info) {
-            bilibilifans.text(info.data.follower);
-
+			if(info.data.follower!=null){
+				bilibilifans.text(info.data.follower);
+			}else{
+				bilibilifans.text("未知")
+			}
         },
         error: function () {
             bilibilifans.text("未知")
