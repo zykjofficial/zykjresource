@@ -78,3 +78,11 @@ if(mobile_sidebar_menus != null){
         menus_expand[i].className += " closed";
     }
 }
+
+// 针对不同域名的Url变化
+var post_copyright_info = document.getElementsByClassName("post-copyright-info")[1]
+
+if(post_copyright_info){
+    postUrl = post_copyright_info.getElementsByTagName("a")[0];
+    postUrl.href = postUrl.innerText  = window.location.origin + window.location.pathname
+}
