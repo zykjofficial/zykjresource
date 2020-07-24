@@ -687,11 +687,6 @@ div.btns.rounded a > img:first-child, div.btns.rounded a > i:first-child {
     filter: brightness(0.7);
 }
 
-[data-theme="dark"] p {
-    color: #fff;
-    filter: brightness(0.7);
-}
-
 details {
     display: block;
     padding: 16px;
@@ -1522,10 +1517,6 @@ div.note.blue::before {
     filter: brightness(0.7);
 }
 
-[data-theme="dark"] .tip {
-    color: #4c4948;
-}
-
 /* tip 结束 */
 
 /* a标签颜色改变 */
@@ -1547,6 +1538,14 @@ div.note.blue::before {
 
 #page-header{
     background-color: transparent;
+}
+
+[data-theme=dark] span.inline-tag {
+    color: rgba(255,255,255,.8);
+}
+
+[data-theme=dark] span.inline-tag {
+    filter: brightness(.7);
 }
 
 span.inline-tag {

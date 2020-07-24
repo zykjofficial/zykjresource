@@ -1,3 +1,7 @@
+if (window.location.host.indexOf("js.org" || "github.io") > -1 && window.location.protocol !== "https:") {
+    window.location.protocol = "https";
+}
+
 (function () {
 //随机图片
     var full_page = document.getElementsByClassName("full_page")[0];
@@ -70,9 +74,9 @@ if (ip_content != null && returnCitySN != undefined) {
 
 //手机侧边栏默认不展开
 var mobile_sidebar_menus = document.getElementById("mobile-sidebar-menus");
-if(mobile_sidebar_menus != null){
-	var menus_item_child = mobile_sidebar_menus.getElementsByClassName("menus_item_child");
-	var menus_expand = mobile_sidebar_menus.getElementsByClassName("expand");
+if (mobile_sidebar_menus != null) {
+    var menus_item_child = mobile_sidebar_menus.getElementsByClassName("menus_item_child");
+    var menus_expand = mobile_sidebar_menus.getElementsByClassName("expand");
     for (var i = 0; i < menus_item_child.length; i++) {
         menus_item_child[i].style.display = "none";
         menus_expand[i].className += " closed";
@@ -82,7 +86,7 @@ if(mobile_sidebar_menus != null){
 // 针对不同域名的Url变化
 var post_copyright_info = document.getElementsByClassName("post-copyright-info")[1]
 
-if(post_copyright_info){
+if (post_copyright_info) {
     postUrl = post_copyright_info.getElementsByTagName("a")[0];
-    postUrl.href = postUrl.innerText  = window.location.origin + window.location.pathname
+    postUrl.href = postUrl.innerText = window.location.origin + window.location.pathname
 }
