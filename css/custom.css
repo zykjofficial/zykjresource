@@ -7,6 +7,41 @@ a, img {
     cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/link.cur), auto !important;
 }
 
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/Jkll8I.png), auto;
+}
+
+/*a标签*/
+a:hover {
+    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/link.cur), auto
+}
+
+/*按钮*/
+button:hover {
+    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/link.cur), auto
+}
+
+/*i标签*/
+i:hover {
+    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/link.cur), auto
+}
+
+/*页脚a标签*/
+#footer-wrap a:hover {
+    text-decoration: none;
+    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/link.cur), auto
+}
+
+/*分页器*/
+#pagination .page-number:hover {
+    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/link.cur), auto
+}
+
+/*头部的导航栏*/
+#nav .site-page:hover {
+    cursor: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/link.cur), auto
+}
+
 /*鼠标样式END*/
 
 /*滚动条样式*/
@@ -68,6 +103,10 @@ kbd {
 /*键盘样式END*/
 
 /*github-badge标签样式 来自 https://blog.csdn.net/victoryxa/details/105841440 */
+[data-theme="dark"] .github-badge {
+    filter: brightness(0.7);
+}
+
 .github-badge {
     display: inline-block;
     border-radius: 4px;
@@ -1623,4 +1662,106 @@ p.right {
 p.top {
     border-top-width: 5px;
     border-top-color: var(--Color)
+}
+
+
+@keyframes link_custom {
+    from {
+        box-shadow: 0 0 5px var(--primary-color, grey), inset 0 0 5px var(--primary-color, grey), 0 1px 0 var(--primary-color, grey)
+    }
+    to {
+        box-shadow: 0 0 20px var(--primary-color, grey), inset 0 0 10px var(--primary-color, grey), 0 1px 0 var(--primary-color, grey)
+    }
+}
+
+@keyframes link_custom1 {
+    0% {
+        box-shadow: 0 0 4px #ca00ff
+    }
+    25% {
+        box-shadow: 0 0 16px #00b5e5
+    }
+    50% {
+        box-shadow: 0 0 4px #00f
+    }
+    75% {
+        box-shadow: 0 0 16px #b1da21
+    }
+    100% {
+        box-shadow: 0 0 4px red
+    }
+}
+
+@keyframes borderFlash {
+    from {
+        border-color: transparent
+    }
+    to {
+        border-color: var(--primary-color, grey)
+    }
+}
+
+@keyframes auto_rotate_left {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(-360deg)
+    }
+}
+
+@keyframes auto_rotate_right {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/* 友链样式 */
+.flink#article-container .flink-list > .flink-list-item a:hover {
+    color: #fff
+}
+
+.flink .flink-list > .flink-list-item a {
+    color: var(--primary-color, #49b1f5);
+    text-decoration: none
+}
+
+.flink .flink-list > .flink-list-item:hover {
+    box-shadow: 0 2px 20px var(--primary-color, #49b1f5);
+    animation-play-state: paused
+}
+
+.flink#article-container .flink-list > .flink-list-item:before {
+    background: var(--primary-color, #49b1f5)
+}
+
+.flink .flink-list > .flink-list-item {
+    border: 0 solid var(--primary-color, #49b1f5)
+}
+
+.flink#article-container .flink-list > .flink-list-item:hover img {
+    -webkit-transform: rotate(var(--primary-rotate));
+    -moz-transform: rotate(var(--primary-rotate));
+    -o-transform: rotate(var(--primary-rotate));
+    -ms-transform: rotate(var(--primary-rotate));
+    transform: rotate(var(--primary-rotate))
+}
+
+.flink#article-container .flink-list > .flink-list-item a .lauto {
+    animation: auto_rotate_left var(--autotime) linear infinite
+}
+
+.flink#article-container .flink-list > .flink-list-item a .rauto {
+    animation: auto_rotate_right var(--autotime) linear infinite
+}
+
+.flink#article-container .flink-list > .flink-list-item .customcolor {
+    color: var(--namecolor, #1f2d3d)
+}
+
+.flink#article-container .flink-list > .flink-list-item .customcolor:hover {
+    color: #fff
 }
