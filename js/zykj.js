@@ -7,7 +7,7 @@ if (window.location.host.indexOf("js.org" || "github.io") > -1 && window.locatio
     var full_page = document.getElementsByClassName("full_page")[0];
     var footer_bg = document.getElementById("footer");
 
-    var img = "https://cdn.jsdelivr.net/gh/zykjofficial/zykjimg/anime/anime" + Math.floor(Math.random() * 37) + ".png";
+    var img = "https://cdn.jsdelivr.net/gh/zykjofficial/zykjimg/anime/anime" + Math.floor(Math.random() * 45) + ".png";
 
     if (full_page != null && footer_bg != null) {
         full_page.style.backgroundImage = "url(" + img + ")";
@@ -64,7 +64,7 @@ function getBrowserInfo() {
 
 var ip_content = document.querySelector(".ip_content");
 
-if (ip_content != null && returnCitySN != undefined) {
+if (ip_content != null && typeof (returnCitySN) != undefined) {
     ip_content.innerHTML = '欢迎来自 <span class="p red">' + returnCitySN["cname"] + "</span> 的小伙伴<br>" + "访问IP为： <span class='p cyan'>" + returnCitySN["cip"] + "</span><br>浏览器版本：<span class='p blue'>" + getBrowserInfo() + '</span>';
 }
 
