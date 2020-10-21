@@ -60,7 +60,7 @@ i:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #49b1f5;
+  background-color: #49b1f5 !important;
   background-image: -webkit-linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.4) 25%,
@@ -69,8 +69,8 @@ i:hover {
     rgba(255, 255, 255, 0.4) 50%,
     rgba(255, 255, 255, 0.4) 75%,
     transparent 75%,
-    transparent
-  );
+    transparent 
+  ) !important;
   border-radius: 2em;
 }
 
@@ -1952,11 +1952,11 @@ p.top {
 /* #aside_content .card-widget, */
 /* #recent-posts > .recent-post-item, */
 /* .layout_page > div:first-child:not(.recent-posts), */
-.layout_post > #page,
+/* .layout_post > #page,
 .layout_post > #post,
 .read-mode .layout_post > #post {
   background: var(--light_bg_color);
-}
+} */
 
 .table-wrap td,
 th {
@@ -1995,6 +1995,7 @@ th {
   }
 } */
 
+/* 表格强制不换行 */
 .table-wrap table {
   background-color: aliceblue;
   white-space: nowrap;
@@ -2035,6 +2036,7 @@ th {
   transform: translateX(-50%);
 }
 
+/* 头像hover背景 */
 .card-info-avatar:hover {
   background: url(https://cdn.jsdelivr.net/gh/zykjofficial/zykjresource@master/img/img.gif);
 }
