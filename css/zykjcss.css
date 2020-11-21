@@ -1792,7 +1792,6 @@ div.timenode:hover .meta:after {
 [data-theme="dark"] #article-container p a {
   filter: brightness(0.7);
 }
-/* a标签颜色改变END */
 
 [data-theme="dark"] span.inline-tag {
   color: rgba(255, 255, 255, 0.8);
